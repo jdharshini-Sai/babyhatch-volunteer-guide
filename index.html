@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby Hatch Malaysia — Volunteer Legal Guide</title>
+<link rel="stylesheet" href="https://unpkg.com/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f0;min-height:100vh;padding:1rem}
+  .app{max-width:700px;margin:0 auto}
+  .header{background:white;border:1px solid #e5e5e0;border-radius:16px;padding:1.25rem;margin-bottom:1rem;display:flex;align-items:center;gap:14px}
+  .logo{width:48px;height:48px;border-radius:50%;background:#EEEDFE;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .logo i{font-size:22px;color:#534AB7}
+  .header-text h1{font-size:17px;font-weight:600;color:#1a1a1a}
+  .header-text p{font-size:13px;color:#666;margin-top:2px}
+  .badge{display:inline-block;font-size:10px;padding:2px 8px;border-radius:99px;background:#EAF3DE;color:#3B6D11;font-weight:500;margin-top:4px}
+  .topic-bar{display:flex;gap:6px;margin-bottom:1rem;flex-wrap:wrap}
+  .topic-pill{font-size:12px;padding:5px 12px;border-radius:99px;border:1px solid #e0e0da;background:white;color:#666;cursor:pointer;transition:all 0.15s;font-family:inherit}
+  .topic-pill:hover{border-color:#7F77DD;color:#534AB7}
+  .topic-pill.active{background:#EEEDFE;color:#3C3489;border-color:#AFA9EC;font-weight:500}
+  .chat-box{background:white;border:1px solid #e5e5e0;border-radius:16px;padding:1rem;margin-bottom:1rem;min-height:380px;max-height:460px;overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+  .msg{display:flex;gap:10px;align-items:flex-start}
+  .msg.user{flex-direction:row-reverse}
+  .av{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+  .av.ai{background:#EEEDFE;color:#534AB7}
+  .av.user{background:#E1F5EE;color:#0F6E56}
+  .bubble{max-width:78%;padding:11px 15px;border-radius:14px;font-size:13.5px;line-height:1.65;color:#1a1a1a;border:1px solid #e5e5e0;background:#f9f9f7}
+  .msg.user .bubble{background:#EEEDFE;border-color:#AFA9EC;color:#26215C}
+  .quick-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .qbtn{font-size:12px;padding:5px 12px;border-radius:99px;border:1px solid #d0d0cc;background:white;color:#555;cursor:pointer;font-family:inherit;transition:all 0.15s}
+  .qbtn:hover{border-color:#7F77DD;color:#534AB7;background:#EEEDFE}
+  .typing-dots{display:flex;gap:4px;align-items:center;padding:6px 0}
+  .dot{width:7px;height:7px;border-radius:50%;background:#AFA9EC;animation:bounce 1.2s infinite}
+  .dot:nth-child(2){animation-delay:0.2s}
+  .dot:nth-child(3){animation-delay:0.4s}
+  @keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-7px)}}
+  .input-row{display:flex;gap:8px;align-items:flex-end}
+  .input-row textarea{flex:1;border:1px solid #d5d5d0;border-radius:10px;padding:10px 14px;font-size:13.5px;font-family:inherit;resize:none;background:white;color:#1a1a1a;line-height:1.5;min-height:44px;max-height:120px;outline:none;transition:border 0.15s}
+  .input-row textarea:focus{border-color:#7F77DD}
+  .send-btn{width:42px;height:42px;border-radius:10px;background:#534AB7;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;transition:background 0.15s}
+  .send-btn:hover{background:#3C3489}
+  .send-btn i{font-size:18px}
+  .disclaimer{font-size:11px;color:#999;text-align:center;margin-top:6px;line-height:1.5}
+  .ref-section{margin-top:1.25rem}
+  .section-lbl{font-size:11px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px}
+  .ref-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px}
+  .ref-card{background:white;border:1px solid #e5e5e0;border-radius:12px;padding:12px 14px;cursor:pointer;transition:all 0.15s}
+  .ref-card:hover{border-color:#7F77DD;background:#EEEDFE}
+  .ref-card i{font-size:20px;color:#534AB7;margin-bottom:6px}
+  .ref-card .rt{font-size:12.5px;font-weight:500;color:#1a1a1a}
+  .ref-card .rd{font-size:11px;color:#888;margin-top:2px}
+  .credit{text-align:center;font-size:11px;color:#aaa;margin-top:1rem;padding-bottom:0.5rem}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <div class="header">
+    <div class="logo"><i class="ti ti-heart"></i></div>
+    <div class="header-text">
+      <h1>Baby Hatch Malaysia — Volunteer Guide</h1>
+      <p>AI-powered legal and procedural assistant for staff and volunteers</p>
+      <span class="badge">Built by Dharshini Sundram, Senior Legal Counsel</span>
+    </div>
+  </div>
+
+  <div class="topic-bar">
+    <button class="topic-pill active" onclick="setTopic(this,'general')">General</button>
+    <button class="topic-pill" onclick="setTopic(this,'intake')">Baby intake</button>
+    <button class="topic-pill" onclick="setTopic(this,'legal')">Legal obligations</button>
+    <button class="topic-pill" onclick="setTopic(this,'mother')">Supporting mothers</button>
+    <button class="topic-pill" onclick="setTopic(this,'reporting')">Reporting process</button>
+  </div>
+
+  <div class="chat-box" id="chat">
+    <div class="msg">
+      <div class="av ai"><i class="ti ti-heart"></i></div>
+      <div>
+        <div class="bubble">
+          Hello and welcome to the Baby Hatch Malaysia Volunteer Guide.<br><br>
+          I am here to help you navigate legal procedures, intake processes, and case handling with confidence — in plain, clear language.<br><br>
+          I can help with questions about receiving a baby, supporting mothers in crisis, your legal reporting obligations under Malaysian law, documentation requirements, and referral pathways to JKM and other agencies.<br><br>
+          What would you like help with today?
+        </div>
+        <div class="quick-btns">
+          <button class="qbtn" onclick="ask('What do I do when a baby is surrendered at the hatch?')">Baby surrendered</button>
+          <button class="qbtn" onclick="ask('What are my legal reporting obligations?')">Legal obligations</button>
+          <button class="qbtn" onclick="ask('A mother wants to surrender her baby — how do I support her?')">Supporting a mother</button>
+          <button class="qbtn" onclick="ask('What documents do I need to complete after receiving a baby?')">Documentation</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-row">
+    <textarea id="inp" placeholder="Type your question here..." rows="1" onkeydown="handleKey(event)" oninput="resize(this)"></textarea>
+    <button class="send-btn" onclick="sendMsg()" aria-label="Send"><i class="ti ti-send"></i></button>
+  </div>
+  <p class="disclaimer">This assistant provides general guidance based on Malaysian law. For complex cases, always consult a qualified legal professional or contact Jabatan Kebajikan Masyarakat (JKM).</p>
+
+  <div class="ref-section">
+    <div class="section-lbl">Quick reference guides</div>
+    <div class="ref-grid">
+      <div class="ref-card" onclick="ask('Walk me through the full baby intake procedure step by step')">
+        <i class="ti ti-clipboard-list"></i>
+        <div class="rt">Intake procedure</div>
+        <div class="rd">Step-by-step guide</div>
+      </div>
+      <div class="ref-card" onclick="ask('Explain the key Malaysian laws that apply to Baby Hatch operations including the Child Act 2001')">
+        <i class="ti ti-scale"></i>
+        <div class="rt">Legal framework</div>
+        <div class="rd">Malaysian law overview</div>
+      </div>
+      <div class="ref-card" onclick="ask('Which government agencies and referral bodies should I contact after receiving a baby and what are their roles?')">
+        <i class="ti ti-building-hospital"></i>
+        <div class="rt">Referral agencies</div>
+        <div class="rd">Who to contact</div>
+      </div>
+      <div class="ref-card" onclick="ask('How do I handle a distressed mother who is considering abandoning her baby? What should I say and do?')">
+        <i class="ti ti-heart-handshake"></i>
+        <div class="rt">Crisis support</div>
+        <div class="rd">Helping mothers</div>
+      </div>
+      <div class="ref-card" onclick="ask('What are the confidentiality and data protection obligations under PDPA when handling Baby Hatch cases?')">
+        <i class="ti ti-lock"></i>
+        <div class="rt">Confidentiality</div>
+        <div class="rd">Privacy and PDPA</div>
+      </div>
+      <div class="ref-card" onclick="ask('What are the rights of a mother who surrenders her baby at a Baby Hatch in Malaysia?')">
+        <i class="ti ti-user-heart"></i>
+        <div class="rt">Mother\'s rights</div>
+        <div class="rd">Legal protections</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="credit">Created as a pro bono initiative by Dharshini Sundram, Senior Legal Counsel | Baby Hatch Malaysia Support Project</p>
+</div>
+
+<script>
+const SYSTEM = `You are a compassionate and knowledgeable legal assistant for Baby Hatch Malaysia volunteers and staff. You help them navigate legal procedures, intake processes, and case handling under Malaysian law.
+
+Your knowledge covers:
+- The Child Act 2001 (Malaysia)
+- The Abandonment of Child Act (Malaysia)
+- The Registration of Births and Deaths Act 1957
+- The Personal Data Protection Act 2010 (PDPA)
+- Baby Hatch intake and surrender procedures in Malaysia
+- Referral pathways to Jabatan Kebajikan Masyarakat (JKM), hospitals, and police
+- Supporting mothers in crisis with empathy and legal clarity
+- Documentation and reporting obligations for volunteers
+- Rights of mothers who surrender babies
+- Confidentiality obligations when handling sensitive cases
+
+Your tone is warm, clear, compassionate and supportive. You are speaking to non-legal volunteers who need practical, plain-language guidance. Always:
+- Use simple, clear language — avoid legal jargon unless you explain it immediately after
+- Be compassionate and non-judgmental about mothers, families and their circumstances
+- Emphasize confidentiality and privacy obligations under PDPA
+- Remind users to contact JKM (03-8000 8000) or a qualified legal professional for complex cases
+- Provide step-by-step numbered guidance when asked about procedures
+- Always prioritize the safety and wellbeing of the child above all else
+- When relevant, mention that mothers who surrender babies through official Baby Hatch channels are protected from prosecution for abandonment under Malaysian law
+
+This assistant was created by Dharshini Sundram, Senior Legal Counsel, as a pro bono initiative to support Baby Hatch Malaysia volunteers and staff.`;
+
+const history = [];
+
+function setTopic(el, topic) {
+  document.querySelectorAll('.topic-pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function resize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+}
+
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMsg(); }
+}
+
+function ask(q) {
+  document.getElementById('inp').value = q;
+  sendMsg();
+}
+
+function addBubble(role, text) {
+  const chat = document.getElementById('chat');
+  const wrap = document.createElement('div');
+  wrap.className = 'msg' + (role === 'user' ? ' user' : '');
+  const icon = role === 'user' ? 'ti-user' : 'ti-heart';
+  const formatted = text.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  wrap.innerHTML = `<div class="av ${role}"><i class="ti ${icon}"></i></div><div class="bubble">${formatted}</div>`;
+  chat.appendChild(wrap);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function showTyping() {
+  const chat = document.getElementById('chat');
+  const wrap = document.createElement('div');
+  wrap.className = 'msg';
+  wrap.id = 'typing';
+  wrap.innerHTML = `<div class="av ai"><i class="ti ti-heart"></i></div><div class="bubble"><div class="typing-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>`;
+  chat.appendChild(wrap);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function removeTyping() {
+  const t = document.getElementById('typing');
+  if (t) t.remove();
+}
+
+async function sendMsg() {
+  const inp = document.getElementById('inp');
+  const text = inp.value.trim();
+  if (!text) return;
+  inp.value = '';
+  inp.style.height = 'auto';
+  addBubble('user', text);
+  history.push({ role: 'user', content: text });
+  showTyping();
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 1000,
+        system: SYSTEM,
+        messages: history
+      })
+    });
+    const data = await res.json();
+    removeTyping();
+    const reply = data.content && data.content[0] ? data.content[0].text : 'I am sorry, I could not process that. Please try again.';
+    history.push({ role: 'assistant', content: reply });
+    addBubble('ai', reply);
+  } catch (e) {
+    removeTyping();
+    addBubble('ai', 'I am having trouble connecting right now. Please check your internet connection and try again.');
+  }
+}
+</script>
+</body>
+</html>
